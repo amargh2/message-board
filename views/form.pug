@@ -1,7 +1,16 @@
-h1 Add a new message 
-form(method='POST', action='/new')
-  label(for='user') What is your name?
-  input(name='user' type='text' id='user')
-  label(for='text') What is your message?
-  textarea(name='text')
-  button(type="submit") Submit
+extends layout
+
+block content
+  div.container
+    div.formcontainer
+      h1(class='test') Add a new message 
+      form(method='POST', action='/new')
+          div.container
+              div.user  
+                label(for='user') What is your name?  
+                input(name='user' type='text' id='user')
+              div.message
+                label(for='text') What's on your mind?  
+                textarea(name='text' rows='3')
+              div.submitbutton
+                button.btn(type="submit") Submit
