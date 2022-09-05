@@ -1,0 +1,7 @@
+h1 Add a new message 
+form(method='POST', action='/new')
+  label(for='user') What is your name?
+  input(name='user' type='text' id='user')
+  label(for='text') What is your message?
+  textarea(name='text')
+  button(type="submit") Submit
