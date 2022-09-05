@@ -31,6 +31,7 @@ router.post('/new', function(req, res, next) {
     added: new Date()
   }
   messages.push(message)
+  res.redirect('/')
 })
 
 module.exports = router;
