@@ -4,10 +4,13 @@ block content
   div.wrapper  
     div.container
       h1 Welcome to the message board  
-      button.btn(click='/new')  Add a new message
-      each message in messages
-        ul 
-          li= message.text 
-          li= message.user 
-          li= message.added
+      a(href='/new' decoration='none')
+        button.btn Something to say?
+      div.message-container  
+        each message in messages
+          div.message-card
+            div.user-date-field  
+              p.username=message.user 
+              p.message=message.added
+            div=message.text
 

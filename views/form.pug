@@ -7,10 +7,14 @@ block content
       form(method='POST', action='/new')
           div.container
               div.user  
-                label(for='user') What is your name?  
-                input(name='user' type='text' id='user')
+                  div
+                    label(for='user') What is your name?  
+                  div  
+                    input(name='user' type='text' id='user')
               div.message
-                label(for='text') What's on your mind?  
-                textarea(name='text' rows='3')
+                div 
+                  label(for='text') What's on your mind?  
+                div
+                  textarea(name='text' rows='5' cols='')
               div.submitbutton
                 button.btn(type="submit") Submit

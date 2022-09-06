@@ -5,12 +5,12 @@ const messages = [
   {
     text: 'X-Files theme stuck in my head on repeat!',
     user: 'Amando',
-    added: new Date()
+    added: new Date().toLocaleString()
   },
   {
     text: 'The truth is out there!',
     user: 'Charles',
-    added: new Date()
+    added: new Date().toLocaleString()
   }
 ]
 
@@ -26,9 +26,9 @@ router.get('/new', function(req, res, next) {
 
 router.post('/new', function(req, res, next) {
   message = {
-    text: `Message: ${req.body.text}`,
-    user: `User: ${req.body.user}`,
-    added: `Date: ${new Date()}`
+    text: `${req.body.text}`,
+    user: `By: ${req.body.user}`,
+    added: `Date: ${new Date().toLocaleDateString(), new Date().toLocaleString()}`
   }
   messages.push(message)
   res.redirect('/')
