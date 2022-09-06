@@ -1,6 +1,8 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:lightcyan;
+  display:grid;
+  gap:2rem;
 }
 
 a{
@@ -10,16 +12,24 @@ a{
 
 /*message board styles*/
 
+.header{
+  display:flex;
+  justify-content:center;
+  box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
 .username{
   font-weight:bolder;
 }
 
 .message-card{
+  background-color:white;
+  border-radius:.3rem;
   display:flex;
   gap:2rem;
   flex-direction:column;
   justify-items:center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
   padding: 2rem;
   width: 45rem;
 }
@@ -28,6 +38,7 @@ a{
 .message-container{
   display:flex;
   flex-direction:column;
+  gap:1rem;
 }
 
 .user-date-field{
@@ -38,6 +49,8 @@ a{
 /*Form page styles*/
 
 .formcontainer{
+  background-color:white;
+  margin-top:10rem;
   display:grid;
   justify-content:center;
   font-size:1.2rem;
@@ -57,7 +70,7 @@ a{
   display:grid;
   justify-items:center;
   flex-direction:column;
-  gap:1rem
+  gap:1rem;
 }
 
 .formcontainer label{
@@ -82,16 +95,15 @@ input:focus, textarea:focus{
   justify-items:center;
 }
 
-h1{
-  background-color: 'red';
-}
 
-.btn, .submitbutton {
+
+.btn{
   padding: 1rem 1rem 1rem 1rem;
   border-radius:.2rem;
   display:flex;
   place-self:center;
-  font-size:1.2rem;
+  font-size:1.1rem;
+  background-color:white
 }
 
 .btn:hover{

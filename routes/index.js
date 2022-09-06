@@ -27,8 +27,8 @@ router.get('/new', function(req, res, next) {
 router.post('/new', function(req, res, next) {
   message = {
     text: `${req.body.text}`,
-    user: `By: ${req.body.user}`,
-    added: `Date: ${new Date().toLocaleDateString(), new Date().toLocaleString()}`
+    user: `${req.body.user}`,
+    added: `${new Date().toLocaleDateString(), new Date().toLocaleString()}`
   }
   messages.push(message)
   res.redirect('/')

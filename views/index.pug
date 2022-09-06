@@ -1,16 +1,16 @@
 extends layout
 
 block content
-  div.wrapper  
-    div.container
-      h1 Welcome to the message board  
-      a(href='/new' decoration='none')
-        button.btn Something to say?
-      div.message-container  
-        each message in messages
-          div.message-card
-            div.user-date-field  
-              p.username=message.user 
-              p.message=message.added
-            div=message.text
+  .header 
+    h2 Message Board  
+  div.container 
+    a(href='/new' decoration='none')
+      button.btn Something to say?
+    div.message-container  
+      each message in messages
+        div.message-card
+          div.user-date-field  
+            p.username=message.user 
+            p.message=message.added
+          div=message.text
 
